@@ -1,0 +1,30 @@
+<!doctype html>
+<title>Stock Price Plot</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
+<div class=page>
+  <h1>User Input</h1>
+  <div class=metanav>
+
+    <h4>
+		Please enter a stock ticker eg. GOOG, and check desired features.
+    </h4>
+
+    <form id='stock' method='post' action='stock' >
+      <p>
+    Ticker Symbole: <input type='text' name='ticker' />
+      </p>
+        <p>
+          Choose stock price type: <br />
+          <input type='radio' name='price_type' value='Closing' /> Closing price <br />
+          <input type='radio' name='price_type' value='Adjusted_closing' /> Adjusted closing price <br />
+          <input type='radio' name='price_type' value='Opening' /> Opening price <br />
+          <input type='radio' name='price_type' value='Adjusted_opening' /> Adjusted opening price <br />
+        </p>
+      <p>
+    <input type='submit' value='Submit' />
+      </p>
+    </form>
+
+  </div>
+</div>
+</html>
